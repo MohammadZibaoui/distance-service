@@ -16,9 +16,10 @@ Serviço autônomo que calcula a distância (em km) entre duas coordenadas geogr
 1. `python -m venv .venv`
 2. `source .venv/bin/activate`
 3. `pip install -r requirements.txt`
-4. `python distance_service.py` (o serviço escutará em `http://127.0.0.1:5000`)
+4. `python distance_service.py` (o serviço executará em `http://127.0.0.1:5000`)
 
 ## Docker
 
 Build: `docker build -t distance-service:local .`
 Run: `docker run -p 5000:5000 distance-service:local`
+
