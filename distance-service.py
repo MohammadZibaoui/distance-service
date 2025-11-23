@@ -1,8 +1,3 @@
-
----
-
-### `distance_service.py`
-```python
 # distance_service.py
 from flask import Flask, request, jsonify
 import math
@@ -63,3 +58,6 @@ def health():
 def get_metrics():
     avg = metrics["total_time_ms"] / metrics["req_count"] if metrics["req_count"] > 0 else 0
     return jsonify({"req_count": metrics["req_count"], "avg_latency_ms": avg})
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000, debug=True)
